@@ -8,15 +8,20 @@ const capitalize  = myModule.capitalize;
 // sum
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
+  expect(sum(1, 2)).not.toBe(4);
 })
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).not.toBe(4);
 })
 
-//capitalize string
+// capitalize string
 test('capitalizes first letter of string', () => {
-  expect(capitalize('hello world')).toBe('Hello world')
+  expect(capitalize('hello world')).toBe('Hello world');
+  expect(capitalize('sally sells seashells')).toBe('Sally sells seashells')
 });
+
+// reverse string
+
 
 
