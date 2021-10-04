@@ -5,6 +5,7 @@ const myModule = require('./index');
 const sum = myModule.sum;
 const capitalize  = myModule.capitalize;
 const reverse = myModule.reverse;
+const calculator = myModule.calculator;
 
 // sum
 test('adds 1 + 2 to equal 3', () => {
@@ -29,4 +30,16 @@ test('reverse the string', () => {
     .toBe('erohsaes eht yb sllehsaes slles yllaS');
 });
 
-
+// calculator
+test('add 4 + 4', () => {
+  expect(calculator.add(4, 4)).toBe(8);
+});
+test('subtract 10 - 5', () => {
+  expect(calculator.subtract(10, 5)).toBe(5);
+});
+test('divide 20 / 5', () => {
+  expect(calculator.divide(20, 5)).toBe(4);
+});
+test('multiply', () => {
+  expect(calculator.multiply(6, 6)).toBe(36);
+});

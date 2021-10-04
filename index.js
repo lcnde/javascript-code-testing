@@ -17,9 +17,23 @@ function reverse(string) {
   return reversed
 };
 
+//calculator
+const calculator = (() => {
+  const add = (a, b) => a + b;
+  const subtract = (a, b) => a - b;
+  const divide = (a, b) => a / b;
+  const multiply = (a, b) => a * b;
+  return {
+    add,
+    subtract,
+    divide,
+    multiply
+  }
+})();
 
 
 // module exports
 exports.sum = sum;
 exports.capitalize = capitalize;
 exports.reverse = reverse;
+exports.calculator = calculator;
