@@ -10,7 +10,16 @@ function capitalize(string) {
 }
 
 // reverse string
+function reverse(string) {
+  var reversed = string.split("");
+  reversed = reversed.reverse();
+  reversed = reversed.join("");
+  return reversed
+};
+
+
 
 // module exports
 exports.sum = sum;
 exports.capitalize = capitalize;
+exports.reverse = reverse;
