@@ -2,7 +2,7 @@
   "name": "javascript-testing",
   "version": "1.0.0",
   "description": "",
-  "main": "capitalize.js",
+  "main": "index.js",
   "dependencies": {},
   "devDependencies": {
     "jest": "^27.2.4"
