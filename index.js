@@ -62,6 +62,47 @@ function cipher(string, key) {
   return splittedString.join('')
 }
 
+// array analysis
+function analyze(array) {
+  let object = {}
+
+  object.average = (() => {
+    let average = 0;
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    };
+    average = sum / array.length;
+    return average;
+  })(array);
+
+  object.min = (() => {
+    let min = array[0]
+    for (let i = 0; i < array.length; i++) {
+      if (min > array[i]) {
+        min = array[i]
+      };
+    };
+    return min
+  })(array);
+
+  object.max = (() => {
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+      if (max < array[i]) {
+        max = array[i]
+      };
+    };
+    return max;
+  })(array);
+
+  object['length'] =  (() => { //used a different syntax because "length" is a reserved word
+    return array.length;
+  })(array)
+
+  return object;
+}
+
 
 // module exports
 exports.sum = sum;
@@ -69,3 +110,4 @@ exports.capitalize = capitalize;
 exports.reverse = reverse;
 exports.calculator = calculator;
 exports.cipher = cipher;
+exports.analyze = analyze;
