@@ -55,5 +55,5 @@ test('cipher without spaces, punctuation or uppsercase letters', () => {
 })
 
 test('cipher should transform z into e', () => {
-  expect(cipher('z', 5)).toBe('e')
+  expect(cipher('z', 83)).toBe('e')
 });
