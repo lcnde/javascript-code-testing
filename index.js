@@ -31,9 +31,42 @@ const calculator = (() => {
   }
 })();
 
+// caesar cipher
+function cipher(string, key) {
+  let dictionary = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  let splittedString = string.split("")
+  
+  // this is the function that swaps indexes and actually does the encrypting for the caesar algorhytm
+  function encrypt(i) {
+    var index = dictionary.indexOf(splittedString[i])
+    index = index + key
+    // makes everything start over from A when index exceeds Z
+    while ( index > 26 ) {
+      index = index - 26
+    }
+    splittedString[i] = dictionary[index];
+  }
+
+  for (let i = 0; i < splittedString.length; i++) {
+    if ( dictionary.includes(splittedString[i].toLowerCase()) == false ) { //checks for letters not included in the dictionary (spaces and punctuation)
+      splittedString[i] = splittedString[i]
+    } else if ( splittedString[i] == splittedString[i].toUpperCase() ) {//check for uppercase letters
+      splittedString[i] = splittedString[i].toLowerCase()
+      encrypt(i);
+      splittedString[i] = splittedString[i].toUpperCase();
+    } else {
+      encrypt(i);
+    }
+  }
+
+  return splittedString.join('')
+}
+
+// take the letter from the string, find the index of that letter in the dictionary, then add +5 to the index of the dictionary, then replace the original string letter with the indexed one in the dictionary
 
 // module exports
 exports.sum = sum;
 exports.capitalize = capitalize;
 exports.reverse = reverse;
 exports.calculator = calculator;
+exports.cipher = cipher;
