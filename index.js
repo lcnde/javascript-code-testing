@@ -62,7 +62,6 @@ function cipher(string, key) {
   return splittedString.join('')
 }
 
-// take the letter from the string, find the index of that letter in the dictionary, then add +5 to the index of the dictionary, then replace the original string letter with the indexed one in the dictionary
 
 // module exports
 exports.sum = sum;
