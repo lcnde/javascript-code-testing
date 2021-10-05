@@ -6,8 +6,7 @@
 
 4. Caesar Cipher
 
-5. 
-Array Analysis. Write a function that takes an array of numbers and returns an object with the following properties: average, min, max, and length.
+5. Array Analysis. Write a function that takes an array of numbers and returns an object with the following properties: average, min, max, and length.
 ```
 const object = analyze([1,8,3,4,2,6]);
 
